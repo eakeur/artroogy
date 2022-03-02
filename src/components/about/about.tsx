@@ -31,6 +31,7 @@ const StyledSection = styled(motion.section)((props) => ({
         display: 'block',
         objectFit: 'cover',
         width: '100%',
+        maxHeight: 775 
     },
 
     '@media (min-width: 1080px)': {

@@ -14,7 +14,7 @@ export function Home(){
     }
     
     return (
-        <HomeSection {...ScreenTransition} id='home'>
+        <HomeSection {...ScreenTransition} id='home' title='Ygor Rodrigues | Portfólio'>
             <motion.span {...item}>Olá, eu sou</motion.span>
             <motion.h1 {...item}>Ygor Rodrigues</motion.h1>
             <motion.button {...item} tabIndex={0} onClick={onClick}>este é meu portfólio</motion.button>

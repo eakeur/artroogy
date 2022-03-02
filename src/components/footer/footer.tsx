@@ -16,7 +16,6 @@ const StyledFooter = styled.footer(props => ({
 export function Footer(){
     return (
         <StyledFooter>
-            <section>aaa</section>
             <span>Feito com ❤️ por Eakeur ®</span>
         </StyledFooter>
     )
