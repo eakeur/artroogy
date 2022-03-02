@@ -47,14 +47,14 @@ export function History(){
                         <span>Produtora Art Mind | 2019</span>
                         <span className="detail">Protagonista: Ygor Rodrigues</span>
                         <span className="detail">Direção: Walnei Oliveira</span>
-                        <span className="detail">Assista <a href="https://youtu.be/cjso_RSFl60">aqui</a></span>
+                        <span className="detail">Assista <a href="https://youtu.be/cjso_RSFl60">ao filme</a></span>
                     </li>
                     <li>
                         Fardo 
                         <span>Produtora Advenus | 2019</span>
                         <span className="detail">Protagonista: Ygor Rodrigues</span>
                         <span className="detail">Direção: Caique Pereira</span>
-                        <span className="detail">Assista <a href="https://youtu.be/KZnFdU-Ky-c">aqui</a></span>
+                        <span className="detail">Assista <a href="https://youtu.be/KZnFdU-Ky-c">ao filme</a></span>
                     </li>
                 </StyledHistory>
             </section>

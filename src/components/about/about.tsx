@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { ScreenTransition } from "../animations/general";
+import { ElementTransition, ScreenTransition } from "../animations/general";
 import { Habilities } from "./habilities";
 import { History } from './history'
 import { Me } from "./me";
@@ -8,16 +8,14 @@ import { Me } from "./me";
 export const AboutRoute = '/sobre'
 
 export function About(){
-    return (
-    <StyledSection id="about" {...ScreenTransition}>
+    
+    return (<StyledSection id="about" {...ScreenTransition}>
         <Me/>
-        <img src="/assets/handeye.jpeg" alt="Eu, com um olhar profundo enquanto toco meu rosto com minhas mãos"/>
+        <motion.img {...ElementTransition} src="/assets/handeye.jpeg" alt="Eu, com um olhar profundo enquanto toco meu rosto com minhas mãos"/>
         <History/>
         <Habilities/>
     </StyledSection>)
 }
-
-
 
 const StyledSection = styled(motion.section)((props) => ({
     marginInline: '5vw', 

@@ -2,42 +2,42 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { Home, HomeRoute } from './components/home/home';
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import { Navigator } from './components/navigator/navigator';
 import { About, AboutRoute } from './components/about/about';
 import { useFile } from './content/text';
 import { GalleryRoute, PhotoGallery } from './components/gallery/gallery';
 import { Footer } from './components/footer/footer';
 import { ContactRoute } from './components/contact/contact';
+import { CSSTransition, TransitionGroup} from 'react-transition-group';
 
 const home = (<Home/>)
 const about = (<About/>)
 const gallery = (<PhotoGallery/>)
 
+export const routes = [
+  { name: 'INÍCIO', path: HomeRoute, comp: home},
+  { name: 'SOBRE MIM', path: AboutRoute, comp: about},
+  { name: 'GALERIA', path: GalleryRoute, comp: gallery},
+  { name: 'CONTATO', path: ContactRoute, comp: gallery},
+]
+
 function App() {
   useFile('./texts.json')
+
   return (
     <>
-      <HashRouter>
-        <Navigator/>
-        <Routes>
-          <Route path={HomeRoute} element={home}/>
-          <Route path={AboutRoute} element={about}/>
-          <Route path={GalleryRoute} element={gallery}/>
-          <Route path={ContactRoute} element={gallery}/>
-        </Routes>
-        <Footer/>
-      </HashRouter>
+      <Navigator routes={routes}/>
+      <Routes>
+        {routes.map((r) => (
+          <Route key={r.path} path={r.path} element={r.comp}></Route>
+        ))}
+      </Routes>
+      <Footer/>
     </>
-  )
+  );
 }
 
 const rootElement = document.getElementById('root');
-ReactDOM.render(<App />, rootElement);
-
-
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, rootElement);
 reportWebVitals();

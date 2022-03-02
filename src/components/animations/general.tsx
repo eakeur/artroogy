@@ -21,6 +21,19 @@ export const ScreenTransition = hiddenVisibleAnim({
     }
 })
 
+export const ElementTransition = hiddenVisibleAnim({
+    hidden: { y: -50, opacity: 0 },
+    visible: { 
+        y: 0,
+        opacity: 1,
+        transition: {
+            delay: 0.3,
+            delayChildren: 0.3,
+            staggerChildren: 0.2
+        },
+    }
+})
+
 export const FadeInAnim = hiddenVisibleAnim({
     hidden: { opacity: 0 },
     visible: { 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useMatch, useResolvedPath } from "react-router-dom";
 import styled from "styled-components";
+import { JsxElement } from "typescript";
 import { AboutRoute } from "../about/about";
 import { ContactRoute } from "../contact/contact";
 import { GalleryRoute } from "../gallery/gallery";
@@ -27,20 +28,24 @@ const StyledNavigator = styled.nav(props => ({
     }
 }));
 
-export function Navigator(){
-    const [ actual, setActual ] = useState(HomeRoute)
-    let location = useLocation()
-    useEffect(() => {
-        const v = window.location.hash.split('/');
-        setActual('/' + v[v.length - 1])
-    }, [location])
-
+export function Navigator(props: NavigatorProps){
     return (
         <StyledNavigator>
-            <Link to={HomeRoute} className={actual === HomeRoute? 'animal-print' : ''}>INÍCIO</Link>
-            <Link to={AboutRoute} className={actual === AboutRoute? 'animal-print' : ''}>SOBRE MIM</Link>
-            <Link to={GalleryRoute} className={actual === GalleryRoute? 'animal-print' : ''}>GALERIA</Link>
-            <Link to={ContactRoute} className={actual === ContactRoute? 'animal-print' : ''}>CONTATO</Link>
+            {props.routes.map((r) => (<NavLink {...r}/>))}
         </StyledNavigator>
     )
+}
+
+
+export function NavLink(props: NavLinkProps){
+    let resolved = useResolvedPath(props.path);
+    let match = useMatch({ path: resolved.pathname, end: true });
+    return (
+        <Link to={props.path} className={match ? 'animal-print' : ''}>{props.name}</Link>
+    )
+}
+
+interface NavLinkProps {name: string, path: string, comp: JSX.Element}
+interface NavigatorProps {
+    routes: NavLinkProps[]
 }
