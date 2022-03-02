@@ -3,7 +3,7 @@ export const GalleryRoute = '/fotos'
 
 export function PhotoGallery(){
     return (
-        <Gallery photos={photos} columns={columns}/>
+        <Gallery photos={photos} columns={columns} direction="column"/>
         // <StyledPhotoGallery {...ScreenTransition}>
         //     <div>
         //         {
