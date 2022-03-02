@@ -1,7 +1,7 @@
 import Gallery from "react-photo-gallery"
 import styled from "styled-components"
 
-export const GalleryRoute = 'fotos'
+export const GalleryRoute = '/fotos'
 
 export function PhotoGallery(){
     return (

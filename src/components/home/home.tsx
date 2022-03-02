@@ -1,7 +1,9 @@
+import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import 'swiper/css';
 import { AboutRoute } from '../about/about';
+import { hiddenVisibleAnim, ScreenTransition } from '../animations/general';
 
 export const HomeRoute = '/'
 export function Home(){
@@ -12,15 +14,15 @@ export function Home(){
     }
     
     return (
-        <HomeSection id='home'>
-            <span>Olá, eu sou</span>
-            <h1>Ygor Rodrigues</h1>
-            <button tabIndex={0} onClick={onClick}>E este é meu portfólio</button>
+        <HomeSection {...ScreenTransition} id='home'>
+            <motion.span {...item}>Olá, eu sou</motion.span>
+            <motion.h1 {...item}>Ygor Rodrigues</motion.h1>
+            <motion.button {...item} tabIndex={0} onClick={onClick}>este é meu portfólio</motion.button>
         </HomeSection>
     )
 }
 
-const HomeSection = styled.section(props => ({
+const HomeSection = styled(motion.section)(props => ({
     height: "100%",
     display: "flex",
     flexDirection: "column",
@@ -33,10 +35,14 @@ const HomeSection = styled.section(props => ({
     textAlign: 'center',
     "h1": {
         margin: '10px',
-        fontSize: '56pt',
         transition: '200ms',
         color: 'white',
         textShadow: '1px 1px 2px black',
+    },
+    '@media (max-width: 580px)': {
+        h1: {
+            fontSize: 48,
+        },
     },
     "footer": {
         position: 'absolute',
@@ -53,3 +59,12 @@ const HomeSection = styled.section(props => ({
     },
     
 }))
+
+const item = hiddenVisibleAnim({
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1
+    }
+});
+  

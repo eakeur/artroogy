@@ -7,6 +7,8 @@ import { Navigator } from './components/navigator/navigator';
 import { About, AboutRoute } from './components/about/about';
 import { useFile } from './content/text';
 import { GalleryRoute, PhotoGallery } from './components/gallery/gallery';
+import { Footer } from './components/footer/footer';
+import { ContactRoute } from './components/contact/contact';
 
 const home = (<Home/>)
 const about = (<About/>)
@@ -22,7 +24,9 @@ function App() {
           <Route path={HomeRoute} element={home}/>
           <Route path={AboutRoute} element={about}/>
           <Route path={GalleryRoute} element={gallery}/>
+          <Route path={ContactRoute} element={gallery}/>
         </Routes>
+        <Footer/>
       </HashRouter>
     </>
   )

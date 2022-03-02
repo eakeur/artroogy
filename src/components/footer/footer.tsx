@@ -1,22 +1,23 @@
 import styled from "styled-components";
 
 
-const StyledFooter = styled.footer`
-    max-height: 20vh;
-    width: 100%;
+const StyledFooter = styled.footer(props => ({
+    display: 'flex',
+    justifyContent: 'space-between',
+    paddingInline: '10%',
+    paddingBlockEnd: '20px', 
 
-    margin-bottom: 20px;
-`;
+    '@media (max-width: 720px)': {
+        flexDirection: 'column',
+        alignItems: 'center'
+    },
+}))
 
 export function Footer(){
     return (
         <StyledFooter>
-            <p>Text texttextext te xtte xttexttext. Texttext, text text texttext te xtte.
-                Text texttextext te xtte xttexttext. Texttext, text text texttext te xtte.
-                Text texttextext te xtte xttexttext. Texttext, text text texttext te xtte.
-                Text texttextext te xtte xttexttext. Texttext, text text texttext te xtte.
-                Text texttextext te xtte xttexttext. Texttext, text text texttext te xtte.
-            </p>
+            <section>aaa</section>
+            <span>Feito com ❤️ por Eakeur ®</span>
         </StyledFooter>
     )
 }
