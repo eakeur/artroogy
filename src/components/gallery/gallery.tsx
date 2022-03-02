@@ -1,7 +1,4 @@
-import { motion } from "framer-motion"
 import Gallery from "react-photo-gallery"
-import styled from "styled-components"
-
 export const GalleryRoute = '/fotos'
 
 export function PhotoGallery(){
