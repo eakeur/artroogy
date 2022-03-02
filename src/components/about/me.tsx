@@ -1,5 +1,4 @@
 import { motion } from "framer-motion"
-import { FadeInAnim, hiddenVisibleAnim, ScreenTransition } from "../animations/general"
 
 export function Me(){
     return (

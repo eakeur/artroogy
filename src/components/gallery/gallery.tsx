@@ -1,5 +1,4 @@
 import Gallery from "react-photo-gallery"
-import styled from "styled-components"
 
 export const GalleryRoute = '/fotos'
 
@@ -16,8 +15,3 @@ const photos = [
         height: 0,
     }
 ]
-
-
-const StyledSection = styled.section(() => ({
-
-}))

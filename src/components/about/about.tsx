@@ -11,7 +11,7 @@ export function About(){
     return (
     <StyledSection id="about" {...ScreenTransition}>
         <Me/>
-        <img src="/assets/handeye.jpeg" alt="Uma image de mim, com foco em meus olhos enquanto toco meu rosto com minhas mãos"/>
+        <img src="/assets/handeye.jpeg" alt="Eu, com um olhar profundo enquanto toco meu rosto com minhas mãos"/>
         <History/>
         <Habilities/>
     </StyledSection>)
