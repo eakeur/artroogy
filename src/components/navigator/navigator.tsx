@@ -1,11 +1,5 @@
-import { useEffect, useState } from "react";
-import { Link, useLocation, useMatch, useResolvedPath } from "react-router-dom";
+import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import styled from "styled-components";
-import { JsxElement } from "typescript";
-import { AboutRoute } from "../about/about";
-import { ContactRoute } from "../contact/contact";
-import { GalleryRoute } from "../gallery/gallery";
-import { HomeRoute } from "../home/home";
 
 
 const StyledNavigator = styled.nav(props => ({

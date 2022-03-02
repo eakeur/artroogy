@@ -1,7 +1,6 @@
 import { motion } from "framer-motion"
 import Gallery from "react-photo-gallery"
 import styled from "styled-components"
-import { ElementTransition, ScreenTransition } from "../animations/general"
 
 export const GalleryRoute = '/fotos'
 
@@ -27,19 +26,19 @@ export function PhotoGallery(){
     )
 }
 
-const StyledPhotoGallery = styled(motion.section)(props => ({
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
+// const StyledPhotoGallery = styled(motion.section)(props => ({
+//     display: 'grid',
+//     gridTemplateColumns: '1fr 1fr',
 
-    div: {
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr'
-    },
+//     div: {
+//         display: 'grid',
+//         gridTemplateColumns: '1fr 1fr'
+//     },
 
-    img: {
-        width: '100%',
-    },
-}))
+//     img: {
+//         width: '100%',
+//     },
+// }))
 
 const photos = [
     {
