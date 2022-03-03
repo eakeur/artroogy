@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { GetResponsiveColsNumber } from "../../common/rendering"
 import { ScreenTransition } from "../../common/animation"
 
-export const GalleryRoute = '/fotos'
+export const GalleryRoute = '/galeria'
 
 export function PhotoGallery(){
     return (

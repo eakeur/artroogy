@@ -1,6 +1,5 @@
 import ReactDOM from 'react-dom';
 import './index.css';
-import reportWebVitals from './reportWebVitals';
 import { Home, HomeRoute } from './views/components/home/home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Navigator } from './views/components/navigator/navigator';
@@ -39,4 +38,3 @@ function App() {
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(<App />, rootElement);
-reportWebVitals();

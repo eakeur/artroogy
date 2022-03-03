@@ -1,1 +1,1 @@
-export const ContactRoute = '/contato'
+export const ContactRoute = '/assessoria'

@@ -5,7 +5,7 @@ import { Habilities } from "./habilities";
 import { History } from './history'
 import { Me } from "./me";
 
-export const AboutRoute = '/sobre'
+export const AboutRoute = '/eu'
 
 export function About(){
     
