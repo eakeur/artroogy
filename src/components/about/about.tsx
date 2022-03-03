@@ -21,7 +21,7 @@ const StyledSection = styled(motion.section)((props) => ({
     marginInline: '5vw', 
     display: 'grid',
     marginBlockStart: 60,
-    gridTemplateColumns: '1fr 2fr 1fr',
+    gridTemplateColumns: '1.6fr 1.6fr 0.8fr',
     gridTemplateRows: 'fit-content',
     textAlign: 'justify',
     columnGap: '5%',
