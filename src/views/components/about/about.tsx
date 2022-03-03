@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { ElementTransition, ScreenTransition } from "../animations/general";
+import { ElementTransition, ScreenTransition } from "../../common/animation";
 import { Habilities } from "./habilities";
 import { History } from './history'
 import { Me } from "./me";

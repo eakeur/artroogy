@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { ElementTransition } from "../animations/general"
+import { ElementTransition } from "../../common/animation"
 
 export function Me(){
     return (

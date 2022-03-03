@@ -4,10 +4,10 @@ import styled from "styled-components";
 
 const StyledNavigator = styled.nav(props => ({
     position: 'absolute',
-    width: '90vw',
+    width: '100%',
     display: 'flex',
     justifyContent: 'space-evenly',
-    margin: 20,
+    marginBlock: 20,
     textDecoration: 'uppercase',
     'a': {
         color: 'white',

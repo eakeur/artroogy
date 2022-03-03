@@ -78,18 +78,3 @@ section > h4 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-.rel {
-  position: 'relative'
-}
-
-
-.spotlight {
-  height: 100%;
-  width: 100%;
-  background-image: radial-gradient(
-      circle,
-      black 160px,
-      black 200px
-  );
-}

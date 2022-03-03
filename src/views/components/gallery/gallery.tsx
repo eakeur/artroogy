@@ -1,14 +1,15 @@
 import { motion } from "framer-motion"
 import Gallery, { PhotoProps } from "react-photo-gallery"
 import styled from "styled-components"
-import { ScreenTransition } from "../animations/general"
+import { GetResponsiveColsNumber } from "../../common/rendering"
+import { ScreenTransition } from "../../common/animation"
 
 export const GalleryRoute = '/fotos'
 
 export function PhotoGallery(){
     return (
         <StyledGallery id="gallery" {...ScreenTransition}>
-            <Gallery photos={photos} columns={columns} direction="column" />
+            <Gallery photos={photos} columns={GetResponsiveColsNumber} direction="column" />
         </StyledGallery>
         
 
@@ -185,12 +186,3 @@ const photos: PhotoProps[] = [
     
 
 ]
-
-
-function columns(containerWidth: number) {
-    let columns = 1;
-    if (containerWidth >= 720) columns = 2;
-    if (containerWidth >= 1080) columns = 3;
-    if (containerWidth >= 1360) columns = 4;
-    return columns;
-  }
