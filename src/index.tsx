@@ -15,10 +15,10 @@ const about = (<About/>)
 const gallery = (<PhotoGallery/>)
 
 export const routes = [
-  { name: 'INÍCIO', path: HomeRoute, comp: home},
-  { name: 'SOBRE MIM', path: AboutRoute, comp: about},
-  { name: 'GALERIA', path: GalleryRoute, comp: gallery},
-  { name: 'CONTATO', path: ContactRoute, comp: gallery},
+  { name: 'BEM VINDO', path: HomeRoute, comp: home},
+  { name: 'EU', path: AboutRoute, comp: about},
+  { name: 'ATELIÊ', path: GalleryRoute, comp: gallery},
+  { name: 'ASSESSORIA', path: ContactRoute, comp: gallery},
 ]
 
 function App() {

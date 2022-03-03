@@ -20,6 +20,7 @@ export function About(){
 const StyledSection = styled(motion.section)((props) => ({
     marginInline: '5vw', 
     display: 'grid',
+    marginBlockStart: 60,
     gridTemplateColumns: '1fr 2fr 1fr',
     gridTemplateRows: 'fit-content',
     textAlign: 'justify',
@@ -29,7 +30,10 @@ const StyledSection = styled(motion.section)((props) => ({
         display: 'block',
         objectFit: 'cover',
         width: '100%',
-        maxHeight: 775 
+        maxHeight: 775,
+        transition: '1s',
+        objectPosition: '50% 50%', 
+
     },
 
     '@media (min-width: 1080px)': {

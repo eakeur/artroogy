@@ -1,0 +1,5 @@
+span.scrollpos {
+    display: block;
+    position: fixed;
+    height: fit-content;
+}

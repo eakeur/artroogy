@@ -6,11 +6,11 @@ export function Habilities(){
             <h4>Habilidades</h4>
             <div style={{flexWrap: 'wrap'}}>
                 <ListItem>Cantar</ListItem>
-                <ListItem>Dançar</ListItem>
                 <ListItem>Dublar</ListItem>
                 <ListItem>Escritor</ListItem>
                 <ListItem>Poeta</ListItem>
                 <ListItem>Roteirista</ListItem>
+                <ListItem>Voleibol | Avançado</ListItem>
                 <ListItem>Instrumentista | Viola de arco</ListItem>
                 <ListItem>Muay Thai | Aprendiz</ListItem>
             </div>

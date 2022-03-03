@@ -1,116 +1,184 @@
-import Gallery from "react-photo-gallery"
+import { motion } from "framer-motion"
+import Gallery, { PhotoProps } from "react-photo-gallery"
+import styled from "styled-components"
+import { ScreenTransition } from "../animations/general"
+
 export const GalleryRoute = '/fotos'
 
 export function PhotoGallery(){
     return (
-        <Gallery photos={photos} columns={columns} direction="column"/>
-        // <StyledPhotoGallery {...ScreenTransition}>
-        //     <div>
-        //         {
-        //             photos.filter((pic, idx) => idx % 2 == 0).map((pic, idx) => (
-        //                 <motion.img {...ElementTransition} src={pic.src} key={pic.src} tabIndex={0} className={'odd'}></motion.img>
-        //             ))
-        //         }
-        //     </div>
-        //     <div>
-        //         {
-        //             photos.filter((pic, idx) => idx % 2 != 0).map((pic, idx) => (
-        //                 <motion.img {...ElementTransition} src={pic.src} key={pic.src} tabIndex={0}></motion.img>
-        //             ))
-        //         }
-        //     </div>
-        // </StyledPhotoGallery>
+        <StyledGallery id="gallery" {...ScreenTransition}>
+            <Gallery photos={photos} columns={columns} direction="column" />
+        </StyledGallery>
+        
+
     )
 }
 
-// const StyledPhotoGallery = styled(motion.section)(props => ({
-//     display: 'grid',
-//     gridTemplateColumns: '1fr 1fr',
+const StyledGallery = styled(motion.section)(props => ({
+    paddingBlockStart: 60,
+    paddingInline: 60,
 
-//     div: {
-//         display: 'grid',
-//         gridTemplateColumns: '1fr 1fr'
-//     },
+    'img': {
+        objectPosition: '40% 50%',
+        objectFit: 'none',
+        transition: '1s'
+    },
 
-//     img: {
-//         width: '100%',
-//     },
-// }))
+    '@media (max-width: 720px)': {
+        'img': {
+            objectPosition: '50% 50%',
+            objectFit: 'fill',
+        }
+    },
 
-const photos = [
+    'img:hover': {
+        objectPosition: '50% 50%',
+        objectFit: 'fill',
+    }
+
+}))
+const photos: PhotoProps[] = [
     {
-        src: "/assets/gallery/pic005.jpeg",
+        src: "/assets/gallery/blue_kiss.jpeg",
         width: 2.5,
         height: 4,
     },
     {
-        src: "/assets/gallery/pic014.jpeg",
-        width: 2.5,
-        height: 4,
+        src: "/assets/gallery/flipflop_hand.jpeg",
+        width: 12.5,
+        height: 18,
     },
     {
-        src: "/assets/gallery/pic015.jpeg",
-        width: 4,
-        height: 5,
+        src: "/assets/gallery/marvelous_close.jpeg",
+        width: 2.5,
+        height: 4,
     },
     
     {
-        src: "/assets/gallery/pic003.jpeg",
+        src: "/assets/gallery/marvelous_scream.jpeg",
         width: 2.5,
         height: 4,
     },
     {
-        src: "/assets/gallery/pic004.jpeg",
+        src: "/assets/gallery/coloured_posing.jpeg",
         width: 2.5,
         height: 4,
     },
     {
-        src: "/assets/gallery/pic001.jpeg",
+        src: "/assets/gallery/coloured_serious.jpeg",
         width: 2.5,
         height: 4,
     },
     {
-        src: "/assets/gallery/pic006.jpeg",
+        src: "/assets/gallery/coloured_smiling.jpeg",
         width: 2.5,
         height: 4,
     },
     {
-        src: "/assets/gallery/pic007.jpeg",
+        src: "/assets/gallery/coloured_back.jpeg",
         width: 2.5,
         height: 4,
     },
     {
-        src: "/assets/gallery/pic008.jpeg",
+        src: "/assets/gallery/flipflop_tongue.jpeg",
         width: 2.5,
         height: 4,
     },
     {
-        src: "/assets/gallery/pic009.jpeg",
+        src: "/assets/gallery/flipflop_ear.jpeg",
         width: 2.5,
         height: 4,
     },
     {
-        src: "/assets/gallery/pic010.jpeg",
+        src: "/assets/gallery/flipflop_neck.jpeg",
         width: 2.5,
         height: 4,
     },
     {
-        src: "/assets/gallery/pic011.jpeg",
+        src: "/assets/gallery/flipflop_plain.jpeg",
         width: 2.5,
         height: 4,
     },
     {
-        src: "/assets/gallery/pic012.jpeg",
+        src: "/assets/gallery/blue_close.jpeg",
         width: 2.5,
         height: 4,
     },
     {
-        src: "/assets/gallery/pic002.jpeg",
+        src: "/assets/gallery/blue_arms.jpeg",
         width: 2.5,
         height: 4,
     },
     {
-        src: "/assets/gallery/pic013.jpeg",
+        src: "/assets/gallery/blue_hihi.jpeg",
+        width: 2.5,
+        height: 4,
+    },
+    {
+        src: "/assets/gallery/blue_feet.jpeg",
+        width: 2.5,
+        height: 4,
+    },
+    {
+        src: "/assets/gallery/marvelous_cross.jpeg",
+        width: 2.5,
+        height: 4,
+    },
+    {
+        src: "/assets/gallery/marvelous_profile.jpeg",
+        width: 2.5,
+        height: 4,
+    },
+    {
+        src: "/assets/gallery/coloured_thinking.jpeg",
+        width: 2.5,
+        height: 4,
+    },
+    {
+        src: "/assets/gallery/marvelous_collar.jpeg",
+        width: 2.5,
+        height: 4,
+    },
+    {
+        src: "/assets/gallery/tiger_sat.jpeg",
+        width: 2.5,
+        height: 4,
+    },
+    
+    {
+        src: "/assets/gallery/flipflop_smiling.jpeg",
+        width: 2.5,
+        height: 4,
+    },
+    {
+        src: "/assets/gallery/marvelous_sat.jpeg",
+        width: 2.5,
+        height: 4,
+    },
+    
+    {
+        src: "/assets/gallery/tiger_run.jpeg",
+        width: 2.5,
+        height: 4,
+    },
+    {
+        src: "/assets/gallery/tiger_smile.jpeg",
+        width: 2.5,
+        height: 4,
+    },
+    {
+        src: "/assets/gallery/tiger_scare.jpeg",
+        width: 2.5,
+        height: 4,
+    },
+    {
+        src: "/assets/gallery/blue_smile.jpeg",
+        width: 2.5,
+        height: 4,
+    },
+    {
+        src: "/assets/gallery/marvelous_pose.jpeg",
         width: 2.5,
         height: 4,
     },

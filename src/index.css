@@ -12,9 +12,10 @@ html, body, div#root {
   -moz-osx-font-smoothing: grayscale;
   color: #fff;
   background-color: black;
-  height: 100%;
   scroll-behavior: smooth;
   text-shadow: 1px 1px 2px rgb(180, 180, 180);
+  box-sizing: border-box;
+  overflow:auto;
 }
 
 *::-webkit-scrollbar {
@@ -33,6 +34,7 @@ html, body, div#root {
 }
 
 div#root {
+  background-color: transparent;
   box-sizing: border-box;
 }
 
@@ -77,18 +79,17 @@ section > h4 {
   -webkit-text-fill-color: transparent;
 }
 
+.rel {
+  position: 'relative'
+}
 
-.fade-enter {
-  opacity: 0;
-}
-.fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: opacity 250ms;
-}
-.fade-exit {
-  opacity: 1;
-}
-.fade-exit.fade-exit-active {
-  opacity: 0;
-  transition: opacity 250ms;
+
+.spotlight {
+  height: 100%;
+  width: 100%;
+  background-image: radial-gradient(
+      circle,
+      black 160px,
+      black 200px
+  );
 }

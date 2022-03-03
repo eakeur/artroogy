@@ -3,11 +3,11 @@ import styled from "styled-components";
 
 
 const StyledNavigator = styled.nav(props => ({
+    position: 'absolute',
+    width: '90vw',
     display: 'flex',
     justifyContent: 'space-evenly',
-    marginBlock: 20,
-    marginBlockEnd: 40,
-    marginInline: 10,
+    margin: 20,
     textDecoration: 'uppercase',
     'a': {
         color: 'white',
@@ -25,7 +25,7 @@ const StyledNavigator = styled.nav(props => ({
 export function Navigator(props: NavigatorProps){
     return (
         <StyledNavigator>
-            {props.routes.map((r) => (<NavLink {...r}/>))}
+            {props.routes.map((r) => (<NavLink key={r.path} {...r}/>))}
         </StyledNavigator>
     )
 }
