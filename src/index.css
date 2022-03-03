@@ -78,3 +78,13 @@ section > h4 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.stroke {
+  height: 70px;
+  overflow: visible;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  transition: 500ms;
+}
