@@ -1,18 +1,11 @@
 import styled from "styled-components";
 
-export function Habilities(){
+export function Habilities(props: {title: string, children: JSX.Element[]}){
     return (
-        <HabilitySection id="hab">
-            <h4>Habilidades</h4>
+        <HabilitySection>
+            <h4>{props.title}</h4>
             <div style={{flexWrap: 'wrap'}}>
-                <ListItem>Cantar</ListItem>
-                <ListItem>Dublar</ListItem>
-                <ListItem>Escritor</ListItem>
-                <ListItem>Poeta</ListItem>
-                <ListItem>Roteirista</ListItem>
-                <ListItem>Voleibol | Avançado</ListItem>
-                <ListItem>Instrumentista | Viola de arco</ListItem>
-                <ListItem>Muay Thai | Aprendiz</ListItem>
+                {props.children}
             </div>
         </HabilitySection>
     )
@@ -26,7 +19,7 @@ const HabilitySection = styled.section(() => ({
     },
 }))
 
-const ListItem = styled.span(() => ({
+export const HabilityListItem = styled.span(() => ({
     display: "inline",
     backgroundColor: 'var(--golden)',
     borderRadius: 100,
