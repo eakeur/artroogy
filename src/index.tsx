@@ -5,6 +5,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Navigator } from './views/components/navigator/navigator';
 import { useFile } from './content/text';
 import { Footer } from './views/components/footer/footer';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+
 
 const home = (<Home/>)
 const me = (<Me/>)
@@ -34,5 +36,6 @@ function App() {
   );
 }
 
+serviceWorkerRegistration.register();
 const rootElement = document.getElementById('root');
 ReactDOM.render(<App />, rootElement);
