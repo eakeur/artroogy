@@ -12,18 +12,15 @@ export function Contact(props : {name: string, reference?: string, phone?: strin
     )
 }
 
-export const ContactList = styled(motion.div)(props => ({
-    backgroundColor: 'black', 
-    width: '100%', 
-    padding: '50px',
-}))
+export const ContactList = styled(motion.div)(props => ({}))
 
 const StyledContact = styled(motion.section)(props => ({
-    width: '100%',
-    margin: 10,
-    height: 'fit-content',
+    width: 'fit-content',
+    boxSizing: 'border-box',
+    height: '100px',
     textAlign: 'center',
-    padding: 10,
+    paddingBlock: 10,
+    paddingInline: 30,
     border: '1px solid white',
 
     h5: {

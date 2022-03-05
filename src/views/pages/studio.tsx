@@ -1,12 +1,12 @@
 import { motion } from "framer-motion"
 import Gallery, { PhotoProps } from "react-photo-gallery"
 import styled from "styled-components"
-import { GetResponsiveColsNumber } from "../../common/rendering"
-import { ScreenTransition } from "../../common/animation"
+import { ScreenTransition } from "../common/animation"
+import { GetResponsiveColsNumber } from "../common/rendering"
 
-export const GalleryRoute = '/galeria'
+export const StudioRoute = '/galeria'
 
-export function PhotoGallery(){
+export function Studio(){
     return (
         <StyledGallery id="gallery" {...ScreenTransition}>
             <Gallery photos={photos} columns={GetResponsiveColsNumber} direction="column" />

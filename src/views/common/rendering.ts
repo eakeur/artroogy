@@ -1,7 +1,6 @@
 import React from "react";
 import { Location } from 'history';
-import { GalleryRoute } from "../components/gallery/gallery";
-import { MeRoute } from "../pages";
+import { MeRoute, StudioRoute } from "../pages";
 
 export function GetResponsiveColsNumber(containerWidth: number) {
     let columns = 1;
@@ -13,7 +12,7 @@ export function GetResponsiveColsNumber(containerWidth: number) {
 
 export function FooterOnLocationChange(location: Location, ref: React.MutableRefObject<HTMLElement | undefined | null>){
     if (ref.current){
-        if (location.pathname === MeRoute || location.pathname === GalleryRoute) {
+        if (location.pathname === MeRoute || location.pathname === StudioRoute) {
             ref.current.style.position = 'relative'
         } else {
             ref.current.style.position = 'fixed'
