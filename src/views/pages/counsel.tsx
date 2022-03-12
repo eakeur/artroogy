@@ -11,7 +11,6 @@ export function Counsel(){
             <ContactsGrid>
                 <ContactListStyled title="Contatos">
                     <h4>CONTATOS</h4>
-                    <li>Kléber Oliveira &nbsp;|&nbsp; casting@clan27.com.br<br/>+55 (11) 98277 - 0727</li>
                     <li>Ygor Rodrigues &nbsp;|&nbsp; ygor.artista@gmail.com</li>
                 </ContactListStyled>
 
@@ -44,14 +43,14 @@ export function Counsel(){
                     </a>
                 </SocialSection>
 
-                <Form title="Form">
+                {/* <Form title="Form">
                     <input placeholder="Seu nome" name="name" id="name" type="text"/>
                     <input placeholder="Seu e-mail" name="email" id="email" type="email"/>
                     <textarea placeholder="Escreva uma mensagem pra gente" name="message" id="message"/>
                     <StyledButton title="Enviar mensagem" tabIndex={0}>
                         ENVIAR
                     </StyledButton>
-                </Form>
+                </Form> */}
             </ContactsGrid>
         </CouselSection>
     )
