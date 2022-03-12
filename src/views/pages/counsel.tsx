@@ -65,47 +65,47 @@ const ContactListStyled = styled.ul(props => ({
     },
 }))
 
-const Form = styled.form(props => ({
-    boxSizing: 'border-box',
-    'input, textarea': {
-        color: "white",
-        border: '1px white solid',
-        outline: 'none',
-        padding: 10,
-        backgroundColor: 'transparent',
-        height: 50,
-        fontSize: 20,
-        marginBlockEnd: 20,
-        width: '100%',
-        boxSizing: 'border-box'
-    },
+// const Form = styled.form(props => ({
+//     boxSizing: 'border-box',
+//     'input, textarea': {
+//         color: "white",
+//         border: '1px white solid',
+//         outline: 'none',
+//         padding: 10,
+//         backgroundColor: 'transparent',
+//         height: 50,
+//         fontSize: 20,
+//         marginBlockEnd: 20,
+//         width: '100%',
+//         boxSizing: 'border-box'
+//     },
 
-    'textarea': {
-        height: '45%',
-    },
+//     'textarea': {
+//         height: '45%',
+//     },
 
-    'input::placeholder, textarea::placeholder': {
-        padding: 10,
-        color: "white",
-        fontSize: 20,
-    },
+//     'input::placeholder, textarea::placeholder': {
+//         padding: 10,
+//         color: "white",
+//         fontSize: 20,
+//     },
 
-    'input:hover, outline:hover': {
-        outline: 'none',
-    }
-}))
+//     'input:hover, outline:hover': {
+//         outline: 'none',
+//     }
+// }))
 
-const StyledButton = styled.button(props => ({
-    border: '1px solid white',
-    backgroundColor: 'transparent',
-    fontFamily: 'Outfit',
-    color: 'white',
-    fontWeight: 400,
-    textTransform: 'uppercase',
-    cursor: 'pointer',
-    height: 50,
+// const StyledButton = styled.button(props => ({
+//     border: '1px solid white',
+//     backgroundColor: 'transparent',
+//     fontFamily: 'Outfit',
+//     color: 'white',
+//     fontWeight: 400,
+//     textTransform: 'uppercase',
+//     cursor: 'pointer',
+//     height: 50,
 
-}))
+// }))
 
 const SocialSection = styled.div(props => ({
     div: {
