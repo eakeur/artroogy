@@ -57,13 +57,13 @@ function HistorySection(){
                 <HistoryListItem name="Fôlego" description="Produtora Art Mind | 2019" 
                     detail={[
                         'Protagonista: Ygor Rodrigues', 'Direção: Walnei Oliveira', 
-                        //'Assista <a href="https://youtu.be/cjso_RSFl60">ao filme</a>',
+                        <span>Assista <a href="https://youtu.be/cjso_RSFl60">ao filme</a></span>,
                     ]}
                 />
                 <HistoryListItem name="Fardo" description="Produtora Advenus | 2019" 
                     detail={[
                         'Protagonista: Ygor Rodrigues', 'Direção: Caique Pereira', 
-                        //'Assista <a href="https://youtu.be/KZnFdU-Ky-c">ao filme</a>',
+                        <span>Assista <a href="https://youtu.be/KZnFdU-Ky-c">ao filme</a></span>,
                     ]}
                 />
             </History>

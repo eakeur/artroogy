@@ -11,7 +11,8 @@ export function History(props: {title: string, children: JSX.Element[]}){
     )
 }
 
-export function HistoryListItem(props: {name: string, description?: string, detail?: string[]}){
+type Detail = string | JSX.Element
+export function HistoryListItem(props: {name: string, description?: string, detail?: Detail[]}){
     return (
         <li>
             {props.name}
