@@ -43,9 +43,9 @@ code {
     monospace;
 }
 
-a {
+/* a {
   color: var(--golden);
-}
+} */
 
 
 section > h1 {
